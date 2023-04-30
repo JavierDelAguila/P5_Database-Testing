@@ -20,23 +20,23 @@ También se ha creado la estructura de controlador-service-repository y modelo p
 
 A continuación, se incluyen las propiedades relevantes de application.properties:
 
-server.port: 8080
-management.endpoints.web.exposure.include=*
-management.endpoint.health.show-components=always
-management.endpoint.health.show-details=always
-management.endpoint.health.probes.enabled=true
-spring.thymeleaf.prefix=classpath:/static/
+- server.port: 8080
+- management.endpoints.web.exposure.include=*
+- management.endpoint.health.show-components=always
+- management.endpoint.health.show-details=always
+- management.endpoint.health.probes.enabled=true
+- spring.thymeleaf.prefix=classpath:/static/
 
 //Logging
-spring.output.ansi.enabled=always
-logging.Level.web=INFO
-logging.Level.org.springframework.jdbc.core=DEBUG
+- spring.output.ansi.enabled=always
+- logging.Level.web=INFO
+-logging.Level.org.springframework.jdbc.core=DEBUG
 
 //Database configuration
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
+- spring.datasource.url=jdbc:h2:mem:testdb
+- spring.datasource.driverClassName=org.h2.Driver
+- spring.datasource.username=sa
+- spring.datasource.password=
 
 spring.h2.console.enabled=true
 spring.jpa.generate-ddl=true
