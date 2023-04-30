@@ -18,13 +18,13 @@ Estas operaciones utilizan @Transactional, ya que en cuanto una de ellas falle s
 ## Seguridad
 Todos los inputs de los html están protegidos para no permitir caracteres que no sean alfanuméricos, además de su correspondiente seguridad en el backend, la cual ha sido comprobada exhaustivamente con el testing. Los formularios que requieren introducir la contraseña 2 veces cuentan con un factor extra de seguridad que es la deshabilitación del botón de submit.
 
-##UserDTO
+## UserDTO
 Para la operación de obtener los usuarios se ha creado un objeto UserDTO para asegurarnos de enviar al usuario solo la información que queremos que conozca, es decir, el nombre del usuario y su localidad.
 
-#Pruebas
+## Pruebas
 Se ha realizado un análisis exhaustivo de pruebas al Controlador de usuarios, confirmando todos los casos correctos (200, 201) y todos los posibles casos erróneos: IM_USED, para cuando se desea crear un usuario y este ya existe; BAD_REQUEST para cuando se ha incluido información errónea en los inputs.
 
-#Usuarios
+## Usuarios
 Nueva operativa relacionada con CRUD en la base de datos Usuarios efectuada en las páginas:
 -	http://localhost:8080/FormularioSignUp.html (Método POST)
 -	http://localhost:8080/UserSearcher.html (Método GET) 
@@ -32,8 +32,7 @@ Nueva operativa relacionada con CRUD en la base de datos Usuarios efectuada en l
 -	http://localhost:8080/Delete_user.html (Método DELETE)
 
 
-
-#Localidades Españolas
+# Localidades Españolas
 También se ha creado la estructura de controlador-service-repository y modelo para la base de datos de localidades, aunque el acceso a esta información no ha sido hecho público a los usuarios, por lo que no se puede acceder navegando por la página web. Si se desea, se puede navegar a http://localhost:8080/api/v1/locations, donde se ejecutará la carga de todas las localidades españolas (alrededor de 8500 datos que se guardarán en ese momento en la base de datos) y se mostrarán en pantalla.
 
 ## H2
