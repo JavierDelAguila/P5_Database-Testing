@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Borrar Usuarios</title>
+    <link rel="icon" href="./Images/lupaicono.png">
+    <link rel="stylesheet" href="./CSS/CSSstyle.css">
+</head>
+
+<body>
+    <img src="./Images/Fondo.jpg" id="foto_inicio" width=100% height=100%> </img>
+
+    <nav>
+        <ul class= "menu">  <!-- UL= unordered list-->
+            <li>   <!-- LI= list item-->
+                <a href="./index.html">About me</a>  <!-- A= elemento ancla, enlace a otras localizaciones-->
+            </li>
+
+            <li>
+                <a href="./Experience.html">Experience</a>
+            </li>
+            
+            <li>
+                <a style="cursor:pointer" onclick="Alternar()
+                    function Alternar(){ 
+                        let ul= document.getElementById('user_options');
+                        if (ul.style.display=='none'){ul.style.display='';}
+                        else{ul.style.display='none';} 
+                    }" 
+                >Users</a>
+                    <ul style="display:none" id="user_options" class="menu">
+                        <li>                 <a href="./FormularioSignUp.html">Crear usuario</a>                    </li>
+                        <li>                 <a href="./UserSearcher.html">Buscar usuarios</a>                    </li>
+                        <li>                 <a href="./Update_user.html">Actualizar tu usuario</a>                    </li>
+                        <li>                 <a href="./Delete_user.html">Borrar tu usuario</a>                    </li>
+                    </ul>
+
+            </li>
+            
+        <li>
+            <a href="./api.html">Weather Program</a>
+        </li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+
+    <h1>Borra tu usuario</h1>
+    <p>Introduce tu usuario y contraseña para borrar tu usuario. Recuerda que esto es irreversible.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="dato_sin_bordes"> </th>
+                <th class="dato_sin_bordes"> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+				<td class="dato_sin_bordes"> <label id="username_label">Nombre de usuario</label></td>
+			    <td class="dato_sin_bordes"><input id="username" type="text" placeholder="Username" required="required"></td>
+			</tr>
+
+            <tr>
+				<td class="dato_sin_bordes"><label>Introduce la contraseña</label></td>
+			    <td class="dato_sin_bordes"><input id="password" onkeyup='check();'  type="password" placeholder="Password" required="required"></td>
+			</tr>
+
+            <tr>
+				<td class="dato_sin_bordes"><label id="password_label_r" for="password">Introduce la contraseña</label></td>
+			    <td class="dato_sin_bordes"><input id="password_repeat" onkeyup='check();' type="password" placeholder="Repeat Password" required="required"></td>
+			</tr>
+
+            <tr>
+				<td class="dato_sin_bordes"><p></p></td>
+			    <td class="dato_sin_bordes"><button id="btn_detele_user">Eliminar Usuario</button></td>
+			</tr>
+        </tbody>
+
+    </table>
+
+
+    <br>
+    <p id="message"></p>
+    <br>
+
+    <div id="div_ans"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<footer>
+		<ul class="menu">
+			<li><a href="https://www.linkedin.com/in/javier-del-aguila-martos/" id="linkedin_logo"> <img src="./Images/linkedin_logo.png" width=7% height=auto></img> </a> </li>
+			<li><a href="https://instagram.com/" id="insta_logo"> <img src="./Images/instagram_logo.png" width=7% height=auto></img> </a> </li>
+		</ul>
+	</footer>
+
+
+</body>
+    <script type="text/javascript" src="JS/DeleteUser.js"></script>
+</html>
