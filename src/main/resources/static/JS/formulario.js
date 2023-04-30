@@ -32,6 +32,23 @@ var check = function() {
       }
   });
 
+  
+var passwordInput = document.getElementById('password');
+passwordInput.addEventListener('keypress', function(event) {
+  var regex = /^[a-zA-Z0-9]+$/;
+  if (!regex.test(event.key)) {
+      event.preventDefault();
+    }
+});
+
+var password_repeatInput = document.getElementById('password_repeat');
+password_repeatInput.addEventListener('keypress', function(event) {
+  var regex = /^[a-zA-Z0-9]+$/;
+  if (!regex.test(event.key)) {
+      event.preventDefault();
+    }
+});
+
   var btn_submit= document.getElementById("btn_submit");
 btn_submit.addEventListener("click",createUser);
 
