@@ -24,6 +24,15 @@ Para la operación de obtener los usuarios se ha creado un objeto UserDTO para a
 #Pruebas
 Se ha realizado un análisis exhaustivo de pruebas al Controlador de usuarios, confirmando todos los casos correctos (200, 201) y todos los posibles casos erróneos: IM_USED, para cuando se desea crear un usuario y este ya existe; BAD_REQUEST para cuando se ha incluido información errónea en los inputs.
 
+#Usuarios
+Nueva operativa relacionada con CRUD en la base de datos Usuarios efectuada en las páginas:
+-	http://localhost:8080/FormularioSignUp.html (Método POST)
+-	http://localhost:8080/UserSearcher.html (Método GET) 
+-	http://localhost:8080/Update_user.html (Método PUT) 
+-	http://localhost:8080/Delete_user.html (Método DELETE)
+
+
+
 #Localidades Españolas
 También se ha creado la estructura de controlador-service-repository y modelo para la base de datos de localidades, aunque el acceso a esta información no ha sido hecho público a los usuarios, por lo que no se puede acceder navegando por la página web. Si se desea, se puede navegar a http://localhost:8080/api/v1/locations, donde se ejecutará la carga de todas las localidades españolas (alrededor de 8500 datos que se guardarán en ese momento en la base de datos) y se mostrarán en pantalla.
 
